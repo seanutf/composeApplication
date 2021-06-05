@@ -10,6 +10,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
@@ -42,7 +43,22 @@ fun Greeting(name: String) {
 fun DefaultPreview() {
     ComposeApplicationTheme {
         //Greeting("Android")
-        NewsStory()
+        NewsStory1()
+    }
+}
+
+@Composable
+fun NewsStory1() {
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Image( painter = painterResource(R.drawable.header),
+            contentDescription = null,
+            modifier = Modifier.height(40.dp).width(40.dp).
+            clip(shape = RoundedCornerShape(20.dp)),
+            contentScale = ContentScale.Crop)
+        Column {
+            Text("Davenport, California")
+            Text("December 2018")
+        }
     }
 }
 
