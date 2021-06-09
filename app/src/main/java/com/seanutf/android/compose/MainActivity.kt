@@ -49,6 +49,9 @@ fun DefaultPreview() {
 
 @Composable
 fun NewsStory1() {
+    Box(){
+
+    }
     Row(verticalAlignment = Alignment.CenterVertically) {
         Image( painter = painterResource(R.drawable.header),
             contentDescription = null,
